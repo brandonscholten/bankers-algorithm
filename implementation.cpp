@@ -19,7 +19,8 @@ int main () {
         //save first line as available resources
         std::getline(input, line);
         for (int i = 0; i < line.length(); ++i) {
-            available[i] = line[i];
+            available[i] = line[i]-48;
+            std::cout << "available[i] = "; std::cout << available[i] << std::endl;
         }
         //save the rest of the file into allocated and maximum maps
         while (input) {

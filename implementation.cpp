@@ -20,7 +20,6 @@ int main () {
         std::getline(input, line);
         for (int i = 0; i < line.length(); ++i) {
             available[i] = line[i]-48;
-            std::cout << "available[i] = "; std::cout << available[i] << std::endl;
         }
         //save the rest of the file into allocated and maximum maps
         while (input) {
@@ -60,7 +59,7 @@ int main () {
             need[i][j] = max[i][j] - alloc[i][j];
         }
     }
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < processCount; ++i) {
         for (int i = 0; i < processCount; ++i) {
             //TODO: nesting gets too deep here
             if (f[i] == 0) {
